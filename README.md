@@ -1,6 +1,6 @@
 # FlutterFeedbackDialog
 
-A customizable and easy-to-use Flutter package for collecting user feedback through beautiful dialog popups. Supports text input, image attachments, and integrates seamlessly with the **free** [FeedbackNest](https://feedbacknest.app) backend.
+A customizable and easy-to-use Flutter package for collecting user feedback through beautiful dialog popups. Supports text input, image attachments, and integrates seamlessly with the **free** [FeedbackNest](https://feedbacknest.app) AI-powered backend that automatically organizes feedback with smart tags, sentiment analysis, and priority detection.
 
 <div align="center">
 
@@ -30,7 +30,8 @@ A customizable and easy-to-use Flutter package for collecting user feedback thro
 - **⚡ Simple Integration**: Show dialogs with a single function call
 - **✅ Built-in Validation**: Form validation for required fields
 - **🔄 Success Messages**: Custom success notifications
-- **☁️ Free Backend**: Optional integration with FeedbackNest (completely free!)
+- **🤖 AI-Powered Backend**: Free FeedbackNest integration with automatic categorization, sentiment analysis, and smart prioritization
+- **📊 Project Management**: Track feedback progress from Open → In Progress → Done
 
 ## 📸 Screenshots
 
@@ -174,16 +175,33 @@ FlutterFeedbackDialog.show(
 
 ## ☁️ FeedbackNest Integration
 
-**FeedbackNest is completely FREE** and provides a simple backend solution for collecting and managing feedback without any setup complexity.
+**FeedbackNest is completely FREE** and provides an intelligent backend solution for collecting and managing feedback without any setup complexity. It uses **AI to automatically analyze and organize** all user communications.
+
+### 🤖 AI-Powered Features
+
+FeedbackNest automatically uses AI to enhance your feedback management:
+
+- **🎯 Auto-Generated Titles** - AI creates meaningful titles from user messages
+- **🏷️ Smart Tags** - Automatically categorizes feedback with relevant tags
+- **😊 Sentiment Analysis** - Detects user emotions (positive, negative, neutral)
+- **📊 Priority Detection** - AI assigns priority levels based on content urgency
+- **🔍 Smart Search** - Find feedback quickly with AI-enhanced search
+- **📈 Trend Analysis** - Identify patterns and common issues automatically
+- **👥 User Analytics** - Track total users, active sessions, new user growth
+- **🗺️ Geographic Insights** - Monitor user distribution across countries
+- **📱 Version Tracking** - Analyze user behavior across different app versions
+- **⭐ Rating Analytics** - Monitor user satisfaction and app ratings
 
 ### Why Use FeedbackNest?
 
-- ✅ **100% Free** - No cost, no limits
+- ✅ **100% Free** - No cost, no limits, no credit card required
+- ✅ **AI-Powered** - Automatic categorization, sentiment analysis, and prioritization
 - ✅ **Zero Backend Setup** - No server configuration needed  
-- ✅ **Instant Dashboard** - View all feedback in one place
-- ✅ **Analytics & Insights** - Track feedback trends
-- ✅ **Team Collaboration** - Share feedback with your team
-- ✅ **Easy Integration** - Just add your API key
+- ✅ **Smart Dashboard** - AI-organized feedback with actionable insights
+- ✅ **User Analytics** - Comprehensive user tracking, session data, and geographic insights
+- ✅ **Project Management** - Move feedback through stages: Open → In Progress → Done
+- ✅ **Team Collaboration** - Share feedback and track progress with your team
+- ✅ **Easy Integration** - Just add your API key and start collecting feedback
 
 ### Step-by-Step FeedbackNest Setup
 
@@ -202,11 +220,31 @@ FlutterFeedbackDialog.show(
 <!-- Space for FeedbackNest dashboard screenshots -->
 ### FeedbackNest Dashboard Screenshots
 
-*Screenshots of the FeedbackNest dashboard will be added here to show:*
-- *Project creation process*
-- *API key location*
-- *Feedback management interface*
-- *Analytics and insights view*
+#### 📊 User Insights & Analytics Dashboard
+![FeedbackNest Dashboard](screenshots/feedbacknest_dashboard.jpg)
+
+**Comprehensive User Analytics:**
+- **👥 Total Users**: Track your total user base
+- **📈 Sessions Today**: Monitor daily active sessions
+- **🆕 New Users**: See daily user growth
+- **📊 Active Users**: Track 7-day active users
+- **⭐ User Ratings**: Monitor app satisfaction
+- **📈 Historical Trends**: View user growth patterns over time with interactive charts
+- **🗺️ Geographic Insights**: See user distribution by country
+- **📱 Version Analytics**: Track users across different app versions
+- **💤 Inactive Users**: Monitor user retention and engagement
+- **📊 Session Patterns**: Analyze user behavior with detailed session data
+
+#### 🏷️ Individual Feedback with AI Analysis
+![FeedbackNest Feedback Detail](screenshots/feedbacknest_feedback.jpg)
+
+**AI-Enhanced Feedback Details:**
+- **🎯 Auto-Generated Titles**: AI creates meaningful titles like "UI appearance issue", "Random login logouts"
+- **🏷️ Smart Categorization**: Automatic tags based on content analysis
+- **😊 Sentiment Detection**: Real-time sentiment analysis of user emotions
+- **📊 Priority Assignment**: AI determines urgency and importance
+- **👥 User Context**: Complete user information and communication history
+- **🔄 Workflow Management**: Track progress from submission to resolution
 
 #### Step 3: Add FeedbackNest to Your App
 
@@ -241,41 +279,26 @@ FlutterFeedbackDialog.show(
   context,
   type: CommunicationViewType.feedback,
   onSubmit: (CommunicationResponse response) async {
-    try {
-      // Automatically send to FeedbackNest (FREE!)
-      await Feedbacknest.sendFeedback(
+    Feedbacknest.sendFeedback(
         message: response.message,
         email: response.email,
         screenshots: response.screenshots,
         type: 'feedback', // 'bug', 'feature', 'contact'
       );
-      
-      // Show success message
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('✅ Feedback sent successfully!'),
-          backgroundColor: Colors.green,
-        ),
-      );
-    } catch (e) {
-      // Handle errors gracefully
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('❌ Failed to send feedback: $e'),
-          backgroundColor: Colors.red,
-        ),
-      );
-    }
   },
 );
 ```
 
-#### Step 6: View Feedback in Dashboard
+#### Step 6: Manage Feedback with AI Dashboard
 
-1. Log into your FeedbackNest dashboard
-2. View all feedback, bug reports, and feature requests
-3. Analyze trends with built-in analytics
-4. Export data if needed
+1. **View AI-Organized Feedback**: Log into your FeedbackNest dashboard to see all feedback automatically categorized with AI-generated tags and sentiment analysis
+2. **Track Progress**: Move feedback through workflow stages:
+   - **Open** 📋 - New feedback items
+   - **In Progress** 🔄 - Items you're actively working on  
+   - **Resolved** ✅ - Completed feedback items
+3. **Leverage AI Insights**: Use automatic priority detection and sentiment analysis to prioritize important issues
+4. **Team Collaboration**: Share feedback with your team and track who's working on what
+5. **Analytics & Trends**: Monitor feedback patterns, user satisfaction, and resolution times
 
 ## 🎨 Customization
 

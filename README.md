@@ -51,8 +51,8 @@ A customizable and easy-to-use Flutter package for collecting user feedback thro
 
 ```yaml
 dependencies:
-  flutter_feedback_dialog: ^0.0.1
-  feedbacknest_core: ^0.0.2  # Optional: for free backend integration
+  flutter_feedback_dialog: any
+  feedbacknest_core: any  # Optional: for free backend integration
 ```
 
 ### 2. Import Package
@@ -252,8 +252,8 @@ Add the dependency:
 
 ```yaml
 dependencies:
-  flutter_feedback_dialog: ^0.0.1
-  feedbacknest_core: ^0.0.2
+  flutter_feedback_dialog: any
+  feedbacknest_core: any
 ```
 
 #### Step 4: Initialize FeedbackNest

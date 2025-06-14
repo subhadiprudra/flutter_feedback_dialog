@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_feedback_dialog:
     path: ../
-  feedbacknest_core: ^0.0.2
+  feedbacknest_core: any
 
   
 

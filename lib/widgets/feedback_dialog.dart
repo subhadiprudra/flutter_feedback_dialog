@@ -95,17 +95,14 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
             widget.placeholder ?? 'Tell us what you think about our product...',
         submitText: widget.submitText ?? 'Send Feedback',
         successTitle: widget.successTitle ?? 'Thank You!',
-        successMessage:
-            widget.successMessage ??
+        successMessage: widget.successMessage ??
             'Your feedback has been submitted successfully. We appreciate your input!',
-        lightGradientColors:
-            widget.lightGradientColors ??
+        lightGradientColors: widget.lightGradientColors ??
             [
               const Color(0xFF4F46E5),
               const Color(0xFFA855F7),
             ], // from-indigo-600 to-purple-600
-        darkGradientColors:
-            widget.darkGradientColors ??
+        darkGradientColors: widget.darkGradientColors ??
             [
               const Color(0xFF6366F1),
               const Color(0xFFC084FC),
@@ -116,22 +113,18 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
         subtitle: widget.subtitle ?? 'Help us fix issues by reporting bugs',
         buttonText: widget.buttonText ?? 'Report Bug',
         icon: widget.icon ?? Icons.bug_report,
-        placeholder:
-            widget.placeholder ??
+        placeholder: widget.placeholder ??
             'Describe the bug you encountered, including steps to reproduce...',
         submitText: widget.submitText ?? 'Submit Bug Report',
         successTitle: widget.successTitle ?? 'Bug Reported!',
-        successMessage:
-            widget.successMessage ??
+        successMessage: widget.successMessage ??
             'Your bug report has been submitted. Our team will investigate this issue.',
-        lightGradientColors:
-            widget.lightGradientColors ??
+        lightGradientColors: widget.lightGradientColors ??
             [
               const Color(0xFFDC2626),
               const Color(0xFFEC4899),
             ], // from-red-600 to-pink-600
-        darkGradientColors:
-            widget.darkGradientColors ??
+        darkGradientColors: widget.darkGradientColors ??
             [
               const Color(0xFFEF4444),
               const Color(0xFFF472B6),
@@ -142,22 +135,18 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
         subtitle: widget.subtitle ?? 'Share your ideas for new features',
         buttonText: widget.buttonText ?? 'Request Feature',
         icon: widget.icon ?? Icons.lightbulb,
-        placeholder:
-            widget.placeholder ??
+        placeholder: widget.placeholder ??
             'Describe the feature you\'d like to see and how it would help you...',
         submitText: widget.submitText ?? 'Submit Request',
         successTitle: widget.successTitle ?? 'Feature Requested!',
-        successMessage:
-            widget.successMessage ??
+        successMessage: widget.successMessage ??
             'Your feature request has been submitted. We\'ll consider it for future updates.',
-        lightGradientColors:
-            widget.lightGradientColors ??
+        lightGradientColors: widget.lightGradientColors ??
             [
               const Color(0xFF16A34A),
               const Color(0xFF059669),
             ], // from-green-600 to-emerald-600
-        darkGradientColors:
-            widget.darkGradientColors ??
+        darkGradientColors: widget.darkGradientColors ??
             [
               const Color(0xFF22C55E),
               const Color(0xFF10B981),
@@ -272,8 +261,7 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
       insetPadding: EdgeInsets.only(
         left: 16.0,
         right: 16.0,
-        bottom:
-            MediaQuery.of(context).viewInsets.bottom +
+        bottom: MediaQuery.of(context).viewInsets.bottom +
             16.0, // Adjust for keyboard
         top: 16.0,
       ),
@@ -452,13 +440,7 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Your ${widget.type == CommunicationViewType.bug
-                        ? 'Bug Report'
-                        : widget.type == CommunicationViewType.featureRequest
-                        ? 'Feature Request'
-                        : widget.type == CommunicationViewType.contact
-                        ? 'Message'
-                        : 'Feedback'} *',
+                    'Your ${widget.type == CommunicationViewType.bug ? 'Bug Report' : widget.type == CommunicationViewType.featureRequest ? 'Feature Request' : widget.type == CommunicationViewType.contact ? 'Message' : 'Feedback'} *',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
@@ -610,8 +592,7 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            gradient:
-                (_isSubmitting ||
+            gradient: (_isSubmitting ||
                     _messageController.text.trim().isEmpty ||
                     (widget.type == CommunicationViewType.contact &&
                         _emailController.text.trim().isEmpty))
@@ -621,8 +602,7 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
                         ? config.lightGradientColors
                         : config.darkGradientColors,
                   ),
-            color:
-                (_isSubmitting ||
+            color: (_isSubmitting ||
                     _messageController.text.trim().isEmpty ||
                     (widget.type == CommunicationViewType.contact &&
                         _emailController.text.trim().isEmpty))
@@ -640,8 +620,7 @@ class _FeedbackDialogState extends State<FeedbackDialog> {
             color: Colors
                 .transparent, // Make Material transparent for gradient to show
             child: InkWell(
-              onTap:
-                  (_isSubmitting ||
+              onTap: (_isSubmitting ||
                       _messageController.text.trim().isEmpty ||
                       (widget.type == CommunicationViewType.contact &&
                           _emailController.text.trim().isEmpty))

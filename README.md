@@ -19,32 +19,6 @@ A smart rating system that maximizes positive app store reviews while collecting
 - Comprehensive feedback collection
 - Dynamic prompt frequency adjustment
 
-## Auto Rating Flow
-
-```mermaid
-flowchart TD
-    A[Start] --> B{userSessions > x?}
-    B -->|No| C[End - No Action]
-    B -->|Yes| D[Show Rating Dialog]
-    D --> E{Rating > 3?}
-    E -->|No| F[Show Feedback Form]
-    F --> G[Send Feedback to FeedbackNest]
-    G --> H[End - Feedback Collected]
-    E -->|Yes| I[Ask User to Rate on App Store/Play Store]
-    I --> J{User Rated?}
-    J -->|Yes| K[Show Thank You Message]
-    K --> L[Send Feedback to FeedbackNest]
-    L --> M[End - Success]
-    J -->|No| N[Increase threshold: x = x + frequency]
-    N --> O[End - Will Show Later]
-    
-    style A fill:#e1f5fe
-    style C fill:#f3e5f5
-    style H fill:#fff3e0
-    style M fill:#e8f5e8
-    style O fill:#fff3e0
-```
-
 ## 📋 Table of Contents
 
 - [Features](#-features)

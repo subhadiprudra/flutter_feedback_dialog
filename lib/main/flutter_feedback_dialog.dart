@@ -3,7 +3,7 @@ import 'package:flutter_feedback_dialog/models/feedback_models.dart';
 import 'package:flutter_feedback_dialog/widgets/feedback_dialog.dart';
 import 'package:flutter/material.dart';
 
-class FLutterFeedbackDialog {
+class FlutterFeedbackDialog {
   static show(
     BuildContext context, {
     type = CommunicationViewType.feedback,

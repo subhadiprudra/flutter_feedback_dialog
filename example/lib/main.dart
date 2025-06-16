@@ -5,10 +5,7 @@ import 'feedback_dialog_demo.dart';
 /// The main entry point for the Flutter application.
 void main() {
   runApp(const MyApp());
-  Feedbacknest.init(
-    "Q1UJxjPOWwj4K9hlxK69CFXT38phJt8a",
-    userIdentifier: "abc@gmail.com",
-  );
+  Feedbacknest.init("api_key", userIdentifier: "abc@gmail.com");
 }
 
 /// Root widget of the application

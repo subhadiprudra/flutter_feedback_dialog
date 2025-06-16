@@ -47,7 +47,7 @@ class _FeedbackDialogDemoState extends State<FeedbackDialogDemo> {
 
   // Function to show the dialog
   void _showFeedbackDialog() {
-    FLutterFeedbackDialog.show(
+    FlutterFeedbackDialog.show(
       context,
       type: _selectedType,
       theme: _selectedTheme,

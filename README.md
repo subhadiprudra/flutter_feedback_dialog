@@ -9,16 +9,6 @@ A customizable and easy-to-use Flutter package for collecting user feedback thro
 
 </div>
 
-# MyApp - Auto Rating System
-
-A smart rating system that maximizes positive app store reviews while collecting valuable user feedback.
-
-## Features
-- Session-based rating prompts
-- Intelligent user flow based on rating scores
-- Comprehensive feedback collection
-- Dynamic prompt frequency adjustment
-
 
 ## 📋 Table of Contents
 
@@ -287,17 +277,18 @@ void main() {
 
 ```dart
 FlutterFeedbackDialog.show(
-  context,
-  type: CommunicationViewType.feedback,
-  onSubmit: (CommunicationResponse response) async {
-    Feedbacknest.sendFeedback(
+    context,
+    type: _selectedType,
+    theme: _selectedTheme,
+    onSubmit: (CommunicationResponse response) {
+      Feedbacknest.submitCommunication(
         message: response.message,
+        type: _selectedType.name,
         email: response.email,
-        screenshots: response.screenshots,
-        type: 'feedback', // 'bug', 'feature', 'contact'
+        files: response.screenshots,
       );
-  },
-);
+    },
+  );
 ```
 
 #### Step 6: Manage Feedback with AI Dashboard

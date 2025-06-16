@@ -19,6 +19,7 @@ A smart rating system that maximizes positive app store reviews while collecting
 - Comprehensive feedback collection
 - Dynamic prompt frequency adjustment
 
+
 ## 📋 Table of Contents
 
 - [Features](#-features)

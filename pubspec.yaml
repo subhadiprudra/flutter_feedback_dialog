@@ -1,6 +1,6 @@
 name: flutter_feedback_dialog
 description: "A customizable and easy-to-use Flutter package for collecting user feedback through dialog popups."
-version: 0.0.5
+version: 0.0.6
 homepage: https://feedbacknest.app
 repository: https://github.com/subhadiprudra/flutter_feedback_dialog
 license: MIT

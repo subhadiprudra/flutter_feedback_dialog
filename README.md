@@ -1,6 +1,6 @@
 # FlutterFeedbackDialog
 
-Hey r/FlutterDev! 👋
+Hey FlutterDev! 👋
 
 Made a simple Flutter package because I was too lazy to build feedback collection from scratch every time.
 

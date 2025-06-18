@@ -4,7 +4,7 @@ import 'package:flutter_feedback_dialog/widgets/feedback_dialog.dart';
 import 'package:flutter/material.dart';
 
 class FlutterFeedbackDialog {
-  static show(
+  static void show(
     BuildContext context, {
     type = CommunicationViewType.feedback,
     theme = CommunicationTheme.light,

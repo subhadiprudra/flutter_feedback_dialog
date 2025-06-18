@@ -32,10 +32,19 @@ Perfect for solo devs or small teams who want user feedback without the hassle.
 ### Light Theme Dialogs
 | Feedback | Bug Report | Feature Request | Contact |
 |----------|------------|-----------------|---------|
-| ![Feedback Light 1](screenshots/feedback_1_light.png) | ![Bug Light 1](screenshots/bug_1_light.png) | ![Feature Light 1](screenshots/feature_1_light.png) | ![Contact Light 1](screenshots/contact_1_light.png) |
+| ![Feedback Light 1](screenshots/feedback_1_light.png)<br/>![Feedback Light 2](screenshots/feedback_2_light.png) | ![Bug Light 1](screenshots/bug_1_light.png)<br/>![Bug Light 2](screenshots/bug_2_light.png) | ![Feature Light 1](screenshots/feature_1_light.png)<br/>![Feature Light 2](screenshots/feature_2_light.png) | ![Contact Light 1](screenshots/contact_1_light.png)<br/>![Contact Light 2](screenshots/contact_2_light.png) |
 
-### FeedbackNest Dashboard
+### Dark Theme Dialogs
+| Feedback | Bug Report | Feature Request | Contact |
+|----------|------------|-----------------|---------|
+| ![Feedback Dark](screenshots/feedback_dark.png) | ![Bug Dark](screenshots/bug_dark.png) | ![Feature Dark](screenshots/feature_dark.png) | ![Contact Dark](screenshots/contact_dark.png) |
+
+### FeedbackNest Dashboard Screenshots
+
+#### 📊 User Insights & Analytics Dashboard
 ![FeedbackNest Dashboard](screenshots/feedbacknest_dashboard.jpg)
+
+#### 🏷️ Individual Feedback with AI Analysis
 ![FeedbackNest Feedback Detail](screenshots/feedbacknest_feedback.jpg)
 
 ## 🚀 Quick Integration
